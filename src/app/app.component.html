@@ -1,5 +1,9 @@
 <h1> Scully App </h1>
 <router-outlet></router-outlet>
 <footer>
-  Bye !
+  <ul>
+    <li *ngFor="let rt of scully.available$ | async">
+     <a routerLink="{{rt.route}}"> {{rt | json}}</a>
+    </li>
+  </ul>
 </footer>
