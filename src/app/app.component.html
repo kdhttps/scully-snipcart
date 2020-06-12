@@ -3,7 +3,7 @@
 <footer>
   <ul>
     <li *ngFor="let rt of scully.available$ | async">
-     <a routerLink="{{rt.route}}"> {{rt | json}}</a>
+     <a [routerLink]="rt.route"> {{rt.route}}</a>
     </li>
   </ul>
 </footer>
